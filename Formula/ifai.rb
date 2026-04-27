@@ -3,6 +3,7 @@
 
 # IfAI CLI v0.4.4 Homebrew Formula
 # 生成时间: 2026-04-27
+# 修复: Windows 编译错误
 
 class Ifai < Formula
   desc "AI 驱动的命令行代码编辑助手 — 工业级 TUI 体验"
@@ -11,7 +12,7 @@ class Ifai < Formula
   license "MIT"
 
   url "https://github.com/peterfei/ifai/releases/download/v0.4.4/ifai-x86_64-apple-darwin.gz"
-  sha256 "ccd36fdb75f625100ca9d8e3619b76ed08f7fed9d1fce93daf6a577047bcc921"
+  sha256 "8f441ed0d61656ae6c8f183c041daf2024e542d8fd7bad86d7573b76803cbd2b"
 
   def install
     bin.install "ifai"
