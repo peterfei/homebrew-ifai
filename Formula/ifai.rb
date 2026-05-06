@@ -7,11 +7,11 @@
 class Ifai < Formula
   desc "AI-powered CLI with streaming code block rendering"
   homepage "https://github.com/peterfei/ifai"
-  version "0.4.5"
+  version "0.4.6"
   license "MIT"
 
-  url "https://github.com/peterfei/ifai/releases/download/v0.4.5/ifai-x86_64-apple-darwin.gz"
-  sha256 "6c2d62359848fb9d1d60926e2d4eda5f582b1bd1bcec5fbb756392724c25a8bd"
+  url "https://github.com/peterfei/ifai/releases/download/v0.4.6/ifai-x86_64-apple-darwin.gz"
+  sha256 "22c5ac9e47034dd2442593362c50e30287c138588f608f5f7ecff724b29e1feb"
 
   def install
     bin.install "ifai"
