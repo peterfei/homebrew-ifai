@@ -11,7 +11,7 @@ class Ifai < Formula
   license "MIT"
 
   url "https://github.com/peterfei/ifai/releases/download/v0.4.6/ifai-x86_64-apple-darwin.gz"
-  sha256 "22c5ac9e47034dd2442593362c50e30287c138588f608f5f7ecff724b29e1feb"
+  sha256 "b21cd8e0a0eb3610352ff25932c4ec658f60a6540f9a746160b77c24c93c9a65"
 
   def install
     bin.install "ifai"
