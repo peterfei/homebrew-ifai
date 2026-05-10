@@ -7,23 +7,27 @@
 class Ifai < Formula
   desc "AI-powered CLI with streaming code block rendering"
   homepage "https://github.com/peterfei/ifai"
-  version "0.4.6"
+  version "0.4.7"
   license "MIT"
 
-  url "https://github.com/peterfei/ifai/releases/download/v0.4.6/ifai-x86_64-apple-darwin.gz"
-  sha256 "b21cd8e0a0eb3610352ff25932c4ec658f60a6540f9a746160b77c24c93c9a65"
+  on_macos do
+    on_arm do
+      url "https://github.com/peterfei/ifai/releases/download/v0.4.7/ifai-aarch64-apple-darwin.gz"
+      sha256 "8b4ddc1c7f40d45373ba2d0041dd0975946c9dab9becfbe07f990591a32e79dc"
+    end
+
+    on_intel do
+      url "https://github.com/peterfei/ifai/releases/download/v0.4.7/ifai-x86_64-apple-darwin.gz"
+      sha256 "7048b723688056497b1ba1190b49d52bba5ba5e0629fcd359569fba7d669484e"
+    end
+  end
 
   def install
     bin.install "ifai"
-
-    # 生成 shell 补全（可选）
-    # bash_completion.install "completions/#{CLI_NAME}.bash" => "#{CLI_NAME}"
-    # zsh_completion.install "completions/#{CLI_NAME}.zsh" => "_#{CLI_NAME}"
-    # fish_completion.install "completions/#{CLI_NAME}.fish"
   end
 
   test do
-    system "#{bin}/#{CLI_NAME}", "--version"
-    system "#{bin}/#{CLI_NAME}", "help"
+    system "#{bin}/ifai", "--version"
+    system "#{bin}/ifai", "help"
   end
 end
